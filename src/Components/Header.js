@@ -1,8 +1,17 @@
 import styled from "styled-components";
-
+import { auth, provider } from "../firebase";
 
 
 const Header = () => {
+
+    const handleAuth= () => {
+        auth.signInWithCredential(provider).then((res) => {
+            console.log('result =>',res);
+        }).catch((err) => {
+            console.alert("err =>", err);
+        });
+    }
+
     return (
         <Nav> 
             <Logo >
@@ -46,7 +55,7 @@ const Header = () => {
 
                 </a>
                  </NavMenu>
-                <Login>
+                <Login onClick={handleAuth}>
                     <span>Login</span>
                 </Login>
              </Nav>
