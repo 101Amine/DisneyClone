@@ -15,10 +15,70 @@ const Header = () => {
                     <span> HOME </span>
 
                 </a>
+
+                <a href='/search'>
+                    <img src="/images/search-icon.svg" alt="SEARCH"/>
+                    <span> SEARCH  </span>
+
+                </a>
+
+                <a href='/watchlist'>
+                    <img src="/images/watchlist-icon.svg" alt="WATCHLIST"/>
+                    <span> WATCHLIST   </span>
+
+                </a>
+
+                <a href='/originals'>
+                    <img src="/images/original-icon.svg" alt="ORIGINAL"/>
+                    <span> ORIGINALS   </span>
+
+                </a>
+
+                <a href='/movies'>
+                    <img src="/images/movie-icon.svg" alt="ORIGINAL"/>
+                    <span> MOVIES   </span>
+
+                </a>
+
+                <a href='/series'>
+                    <img src="/images/series-icon.svg" alt="ORIGINAL"/>
+                    <span> SERIES   </span>
+
+                </a>
                  </NavMenu>
+                <Login>
+                    <span>Login</span>
+                </Login>
              </Nav>
     )
 }
+
+
+const Login = styled.a `
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        background-color: rgba(0, 0, 0, .6);
+        padding: 8px 16px;
+        text-transform: uppercase;
+        border-radius:4px ;
+        letter-spacing: 1.5px;
+        border: 1px solid #f9f9f9;
+        transition: all 0.2s ease 0s;
+
+        &:hover {
+            background-color: #f9f9f9;
+            color: #000;
+            border-color: transparent;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+    `
 
 const NavMenu = styled.div ` 
 
